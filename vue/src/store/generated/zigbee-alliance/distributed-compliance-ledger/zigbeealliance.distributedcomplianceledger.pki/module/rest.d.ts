@@ -256,7 +256,7 @@ export declare class Api<SecurityDataType extends unknown> extends HttpClient<Se
      * @tags Query
      * @name QueryApprovedCertificatesAll
      * @summary Queries a list of ApprovedCertificates items.
-     * @request GET:/zigbee-alliance/distributedcomplianceledger/pki/approved_certificates
+     * @request GET:/dcl/pki/approved_certificates
      */
     queryApprovedCertificatesAll: (query?: {
         "pagination.key"?: string;
@@ -271,7 +271,7 @@ export declare class Api<SecurityDataType extends unknown> extends HttpClient<Se
      * @tags Query
      * @name QueryApprovedCertificates
      * @summary Queries a ApprovedCertificates by index.
-     * @request GET:/zigbee-alliance/distributedcomplianceledger/pki/approved_certificates/{subject}/{subjectKeyId}
+     * @request GET:/dcl/pki/approved_certificates/{subject}/{subjectKeyId}
      */
     queryApprovedCertificates: (subject: string, subjectKeyId: string, params?: RequestParams) => Promise<HttpResponse<PkiQueryGetApprovedCertificatesResponse, RpcStatus>>;
     /**
@@ -280,7 +280,7 @@ export declare class Api<SecurityDataType extends unknown> extends HttpClient<Se
      * @tags Query
      * @name QueryChildCertificatesAll
      * @summary Queries a list of ChildCertificates items.
-     * @request GET:/zigbee-alliance/distributedcomplianceledger/pki/child_certificates
+     * @request GET:/dcl/pki/child_certificates
      */
     queryChildCertificatesAll: (query?: {
         "pagination.key"?: string;
@@ -295,7 +295,7 @@ export declare class Api<SecurityDataType extends unknown> extends HttpClient<Se
      * @tags Query
      * @name QueryChildCertificates
      * @summary Queries a ChildCertificates by index.
-     * @request GET:/zigbee-alliance/distributedcomplianceledger/pki/child_certificates/{issuer}/{authorityKeyId}
+     * @request GET:/dcl/pki/child_certificates/{issuer}/{authorityKeyId}
      */
     queryChildCertificates: (issuer: string, authorityKeyId: string, params?: RequestParams) => Promise<HttpResponse<PkiQueryGetChildCertificatesResponse, RpcStatus>>;
     /**
@@ -304,7 +304,7 @@ export declare class Api<SecurityDataType extends unknown> extends HttpClient<Se
      * @tags Query
      * @name QueryProposedCertificateAll
      * @summary Queries a list of ProposedCertificate items.
-     * @request GET:/zigbee-alliance/distributedcomplianceledger/pki/proposed_certificate
+     * @request GET:/dcl/pki/proposed_certificate
      */
     queryProposedCertificateAll: (query?: {
         "pagination.key"?: string;
@@ -319,7 +319,7 @@ export declare class Api<SecurityDataType extends unknown> extends HttpClient<Se
      * @tags Query
      * @name QueryProposedCertificate
      * @summary Queries a ProposedCertificate by index.
-     * @request GET:/zigbee-alliance/distributedcomplianceledger/pki/proposed_certificate/{subject}/{subjectKeyId}
+     * @request GET:/dcl/pki/proposed_certificate/{subject}/{subjectKeyId}
      */
     queryProposedCertificate: (subject: string, subjectKeyId: string, params?: RequestParams) => Promise<HttpResponse<PkiQueryGetProposedCertificateResponse, RpcStatus>>;
     /**
@@ -328,7 +328,7 @@ export declare class Api<SecurityDataType extends unknown> extends HttpClient<Se
      * @tags Query
      * @name QueryProposedCertificateRevocationAll
      * @summary Queries a list of ProposedCertificateRevocation items.
-     * @request GET:/zigbee-alliance/distributedcomplianceledger/pki/proposed_certificate_revocation
+     * @request GET:/dcl/pki/proposed_certificate_revocation
      */
     queryProposedCertificateRevocationAll: (query?: {
         "pagination.key"?: string;
@@ -343,7 +343,7 @@ export declare class Api<SecurityDataType extends unknown> extends HttpClient<Se
      * @tags Query
      * @name QueryProposedCertificateRevocation
      * @summary Queries a ProposedCertificateRevocation by index.
-     * @request GET:/zigbee-alliance/distributedcomplianceledger/pki/proposed_certificate_revocation/{subject}/{subjectKeyId}
+     * @request GET:/dcl/pki/proposed_certificate_revocation/{subject}/{subjectKeyId}
      */
     queryProposedCertificateRevocation: (subject: string, subjectKeyId: string, params?: RequestParams) => Promise<HttpResponse<PkiQueryGetProposedCertificateRevocationResponse, RpcStatus>>;
     /**
@@ -352,7 +352,7 @@ export declare class Api<SecurityDataType extends unknown> extends HttpClient<Se
      * @tags Query
      * @name QueryRevokedCertificatesAll
      * @summary Queries a list of RevokedCertificates items.
-     * @request GET:/zigbee-alliance/distributedcomplianceledger/pki/revoked_certificates
+     * @request GET:/dcl/pki/revoked_certificates
      */
     queryRevokedCertificatesAll: (query?: {
         "pagination.key"?: string;
@@ -367,7 +367,7 @@ export declare class Api<SecurityDataType extends unknown> extends HttpClient<Se
      * @tags Query
      * @name QueryRevokedCertificates
      * @summary Queries a RevokedCertificates by index.
-     * @request GET:/zigbee-alliance/distributedcomplianceledger/pki/revoked_certificates/{subject}/{subjectKeyId}
+     * @request GET:/dcl/pki/revoked_certificates/{subject}/{subjectKeyId}
      */
     queryRevokedCertificates: (subject: string, subjectKeyId: string, params?: RequestParams) => Promise<HttpResponse<PkiQueryGetRevokedCertificatesResponse, RpcStatus>>;
 }

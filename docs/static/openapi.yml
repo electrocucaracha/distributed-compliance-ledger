@@ -14301,7 +14301,7 @@ paths:
           type: string
       tags:
         - Query
-  /zigbee-alliance/distributedcomplianceledger/pki/approved_certificates:
+  /dcl/pki/approved_certificates:
     get:
       summary: Queries a list of ApprovedCertificates items.
       operationId: ZigbeeallianceDistributedcomplianceledgerPkiApprovedCertificatesAll
@@ -14440,7 +14440,7 @@ paths:
           type: boolean
       tags:
         - Query
-  '/zigbee-alliance/distributedcomplianceledger/pki/approved_certificates/{subject}/{subjectKeyId}':
+  '/dcl/pki/approved_certificates/{subject}/{subjectKeyId}':
     get:
       summary: Queries a ApprovedCertificates by index.
       operationId: ZigbeeallianceDistributedcomplianceledgerPkiApprovedCertificates
@@ -14502,7 +14502,7 @@ paths:
           type: string
       tags:
         - Query
-  /zigbee-alliance/distributedcomplianceledger/pki/child_certificates:
+  /dcl/pki/child_certificates:
     get:
       summary: Queries a list of ChildCertificates items.
       operationId: ZigbeeallianceDistributedcomplianceledgerPkiChildCertificatesAll
@@ -14629,7 +14629,7 @@ paths:
           type: boolean
       tags:
         - Query
-  '/zigbee-alliance/distributedcomplianceledger/pki/child_certificates/{issuer}/{authorityKeyId}':
+  '/dcl/pki/child_certificates/{issuer}/{authorityKeyId}':
     get:
       summary: Queries a ChildCertificates by index.
       operationId: ZigbeeallianceDistributedcomplianceledgerPkiChildCertificates
@@ -14679,7 +14679,7 @@ paths:
           type: string
       tags:
         - Query
-  /zigbee-alliance/distributedcomplianceledger/pki/proposed_certificate:
+  /dcl/pki/proposed_certificate:
     get:
       summary: Queries a list of ProposedCertificate items.
       operationId: ZigbeeallianceDistributedcomplianceledgerPkiProposedCertificateAll
@@ -14812,7 +14812,7 @@ paths:
           type: boolean
       tags:
         - Query
-  '/zigbee-alliance/distributedcomplianceledger/pki/proposed_certificate/{subject}/{subjectKeyId}':
+  '/dcl/pki/proposed_certificate/{subject}/{subjectKeyId}':
     get:
       summary: Queries a ProposedCertificate by index.
       operationId: ZigbeeallianceDistributedcomplianceledgerPkiProposedCertificate
@@ -14868,7 +14868,7 @@ paths:
           type: string
       tags:
         - Query
-  /zigbee-alliance/distributedcomplianceledger/pki/proposed_certificate_revocation:
+  /dcl/pki/proposed_certificate_revocation:
     get:
       summary: Queries a list of ProposedCertificateRevocation items.
       operationId: >-
@@ -14996,7 +14996,7 @@ paths:
           type: boolean
       tags:
         - Query
-  '/zigbee-alliance/distributedcomplianceledger/pki/proposed_certificate_revocation/{subject}/{subjectKeyId}':
+  '/dcl/pki/proposed_certificate_revocation/{subject}/{subjectKeyId}':
     get:
       summary: Queries a ProposedCertificateRevocation by index.
       operationId: >-
@@ -15047,7 +15047,7 @@ paths:
           type: string
       tags:
         - Query
-  /zigbee-alliance/distributedcomplianceledger/pki/revoked_certificates:
+  /dcl/pki/revoked_certificates:
     get:
       summary: Queries a list of RevokedCertificates items.
       operationId: ZigbeeallianceDistributedcomplianceledgerPkiRevokedCertificatesAll
@@ -15186,7 +15186,7 @@ paths:
           type: boolean
       tags:
         - Query
-  '/zigbee-alliance/distributedcomplianceledger/pki/revoked_certificates/{subject}/{subjectKeyId}':
+  '/dcl/pki/revoked_certificates/{subject}/{subjectKeyId}':
     get:
       summary: Queries a RevokedCertificates by index.
       operationId: ZigbeeallianceDistributedcomplianceledgerPkiRevokedCertificates
