@@ -22,7 +22,7 @@ func CmdShowApprovedRootCertificates() *cobra.Command {
 			params := &types.QueryGetApprovedRootCertificatesRequest{}
 
 			res, err := queryClient.ApprovedRootCertificates(context.Background(), params)
-			if err != nil {
+			if handleError(err) != nil {
 				return err
 			}
 

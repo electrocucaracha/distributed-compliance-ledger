@@ -27,7 +27,7 @@ func CmdShowApprovedCertificatesBySubject() *cobra.Command {
 			}
 
 			res, err := queryClient.ApprovedCertificatesBySubject(context.Background(), params)
-			if err != nil {
+			if handleError(err) != nil {
 				return err
 			}
 

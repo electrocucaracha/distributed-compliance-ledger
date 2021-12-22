@@ -29,7 +29,7 @@ func CmdShowChildCertificates() *cobra.Command {
 			}
 
 			res, err := queryClient.ChildCertificates(context.Background(), params)
-			if err != nil {
+			if handleError(err) != nil {
 				return err
 			}
 

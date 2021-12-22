@@ -62,7 +62,7 @@ func CmdShowProposedCertificate() *cobra.Command {
 			}
 
 			res, err := queryClient.ProposedCertificate(context.Background(), params)
-			if err != nil {
+			if handleError(err) != nil {
 				return err
 			}
 

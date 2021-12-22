@@ -22,7 +22,7 @@ func CmdShowRevokedRootCertificates() *cobra.Command {
 			params := &types.QueryGetRevokedRootCertificatesRequest{}
 
 			res, err := queryClient.RevokedRootCertificates(context.Background(), params)
-			if err != nil {
+			if handleError(err) != nil {
 				return err
 			}
 

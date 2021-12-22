@@ -63,7 +63,7 @@ func CmdShowRevokedCertificates() *cobra.Command {
 			}
 
 			res, err := queryClient.RevokedCertificates(context.Background(), params)
-			if err != nil {
+			if handleError(err) != nil {
 				return err
 			}
 

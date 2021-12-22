@@ -63,12 +63,8 @@ func CmdShowApprovedCertificates() *cobra.Command {
 			}
 
 			res, err := queryClient.ApprovedCertificates(context.Background(), params)
-			if err != nil {
-				switch err.(type) {
-					 default:
-						return err
- 					case *status.Error:
-     					return err
+			if handleError(err) != nil {
+				return err
 			}
 
 			return clientCtx.PrintProto(res)
