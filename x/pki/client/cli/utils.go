@@ -3,6 +3,8 @@ package cli
 import (
 	"io/ioutil"
 	"os"
+
+	"google.golang.org/grpc/status"
 )
 
 func ReadFromFile(target string) (string, error) {
@@ -16,4 +18,8 @@ func ReadFromFile(target string) (string, error) {
 	} else { // else return as is
 		return target, nil
 	}
+}
+
+func handleError(err error) error {
+	_, _ := err.(*status.Error)
 }

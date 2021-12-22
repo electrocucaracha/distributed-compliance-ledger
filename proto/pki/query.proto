@@ -48,11 +48,6 @@ service Query {
 		option (google.api.http).get = "/dcl/pki/child_certificates/{issuer}/{authority_key_id}";
 	}
 
-	// Queries a list of ChildCertificates items.
-	rpc ChildCertificatesAll(QueryAllChildCertificatesRequest) returns (QueryAllChildCertificatesResponse) {
-		option (google.api.http).get = "/dcl/pki/child_certificates";
-	}
-
 // Queries a ProposedCertificateRevocation by index.
 	rpc ProposedCertificateRevocation(QueryGetProposedCertificateRevocationRequest) returns (QueryGetProposedCertificateRevocationResponse) {
 		option (google.api.http).get = "/dcl/pki/proposed_certificate_revocation/{subject}/{subject_key_id}";
@@ -136,15 +131,6 @@ message QueryGetChildCertificatesRequest {
 
 message QueryGetChildCertificatesResponse {
 	ChildCertificates childCertificates = 1 [(gogoproto.nullable) = false];
-}
-
-message QueryAllChildCertificatesRequest {
-	cosmos.base.query.v1beta1.PageRequest pagination = 1;
-}
-
-message QueryAllChildCertificatesResponse {
-	repeated ChildCertificates childCertificates = 1 [(gogoproto.nullable) = false];
-	cosmos.base.query.v1beta1.PageResponse pagination = 2;
 }
 
 message QueryGetProposedCertificateRevocationRequest {

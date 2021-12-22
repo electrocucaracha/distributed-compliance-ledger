@@ -126,7 +126,7 @@ make image &>${DETAILED_OUTPUT_TARGET}
 cleanup_pool
 
 # Cli shell tests
-CLI_SHELL_TESTS=$(find integration_tests/cli -type f -name '*.sh' -not -name "common.sh")
+CLI_SHELL_TESTS=$(find integration_tests/cli -type f -name '*pki-demo.sh' -not -name "common.sh")
 
 for CLI_SHELL_TEST in ${CLI_SHELL_TESTS}; do
   init_pool
@@ -145,26 +145,26 @@ for CLI_SHELL_TEST in ${CLI_SHELL_TESTS}; do
   cleanup_pool
 done
 
-# Go rest tests
-GO_REST_TESTS="$(find integration_tests/grpc_rest -type f -name '*_test.go')"
+# # Go rest tests
+# GO_REST_TESTS="$(find integration_tests/grpc_rest -type f -name '*_test.go')"
 
-for GO_REST_TEST in ${GO_REST_TESTS}; do
-  init_pool
+# for GO_REST_TEST in ${GO_REST_TESTS}; do
+#   init_pool
 
-  log "*****************************************************************************************"
-  log "Running $GO_REST_TEST"
-  log "*****************************************************************************************"
+#   log "*****************************************************************************************"
+#   log "Running $GO_REST_TEST"
+#   log "*****************************************************************************************"
 
-  # TODO issue 99: improve, that await helps with the cases of not ready connections to Cosmos endpoints
-  sleep 5
+#   # TODO issue 99: improve, that await helps with the cases of not ready connections to Cosmos endpoints
+#   sleep 5
 
-  dcld config keyring-backend test
-  if go test "$GO_REST_TEST" &>${DETAILED_OUTPUT_TARGET}; then
-    log "$GO_REST_TEST finished successfully"
-  else
-    log "$GO_REST_TEST failed"
-    exit 1
-  fi
+#   dcld config keyring-backend test
+#   if go test "$GO_REST_TEST" &>${DETAILED_OUTPUT_TARGET}; then
+#     log "$GO_REST_TEST finished successfully"
+#   else
+#     log "$GO_REST_TEST failed"
+#     exit 1
+#   fi
 
-  cleanup_pool
-done
+#   cleanup_pool
+# done

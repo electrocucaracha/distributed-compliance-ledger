@@ -51,7 +51,7 @@ func (k Keeper) ProposedCertificateRevocation(c context.Context, req *types.Quer
 		req.SubjectKeyId,
 	)
 	if !found {
-		return nil, status.Error(codes.InvalidArgument, "not found")
+		return nil, status.Error(codes.NotFound, "not found")
 	}
 
 	return &types.QueryGetProposedCertificateRevocationResponse{ProposedCertificateRevocation: val}, nil

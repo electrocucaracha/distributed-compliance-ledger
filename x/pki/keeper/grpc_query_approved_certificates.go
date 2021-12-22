@@ -51,7 +51,7 @@ func (k Keeper) ApprovedCertificates(c context.Context, req *types.QueryGetAppro
 		req.SubjectKeyId,
 	)
 	if !found {
-		return nil, status.Error(codes.InvalidArgument, "not found")
+		return nil, status.Error(codes.NotFound, "not found")
 	}
 
 	return &types.QueryGetApprovedCertificatesResponse{ApprovedCertificates: val}, nil
